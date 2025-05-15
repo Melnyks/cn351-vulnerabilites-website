@@ -1,5 +1,4 @@
 <?php
-session_start();
 $link = require_once 'db_connect.inc.php';
 
 $error = '';

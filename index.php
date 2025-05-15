@@ -60,15 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
     update_person($link, $id, $fullname, $gender, $birthdate, $occupation, $address, $province, $phone);
 }
 
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
-
-require_once 'db_connect.inc.php';
-
 $query = "SELECT * FROM address ORDER BY id DESC";
 $result = execute_query($link, $query);
 $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
