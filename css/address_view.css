@@ -1,0 +1,87 @@
+body {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid rgb(214, 220, 223);
+    padding: 0.75rem;
+}
+
+table thead th {
+    background-color: rgb(194, 217, 235);
+    text-align: left;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+}
+
+td a:hover {
+    color: rgb(37, 127, 230);
+}
+
+.add-new {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: #4a90e2;
+    padding: 0.65rem 1.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.add-new:hover {
+    background-color: #7cb9e8;
+    transform: translateY(-1px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background-color: rgb(85, 197, 135);
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #74c69d;
+    transform: translateY(-1px);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-delete {
+    background-color: rgb(243, 106, 72);
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: rgb(226, 127, 130);
+    transform: translateY(-1px);
+    color: white;
+    text-decoration: none;
+}
