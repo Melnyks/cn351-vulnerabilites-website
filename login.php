@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
     if ($username === '' || $password === '') {
         $error = 'กรุณากรอกชื่อผู้ใช้และรหัสผ่าน';
     } else {
-        // UNSAFE: SQL Injection possible
+        // UNSAFE: SQL Injection possible using ' OR '1'='1
+        // ' OR 1=1' --
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = mysqli_query($link, $sql);
 

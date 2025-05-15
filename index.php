@@ -13,12 +13,24 @@ function execute_query($link, $query)
     }
 }
 
-
+//<script>alert('XSS')</script>
 function insert_person($link, $fullname, $gender, $birthdate, $occupation, $address, $province, $phone)
 {
-    $query = "INSERT INTO address (fullname,gender,birthdate, occupation,address, province, phone) VALUES ('$fullname','$gender','$birthdate', '$occupation','$address',' $province', '$phone')";
-    return execute_query($link, $query);
+    $stmt = mysqli_prepare($link, "INSERT INTO address (fullname, gender, birthdate, occupation, address, province, phone) VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+    if (!$stmt) {
+        die("Prepare failed: " . mysqli_error($link));
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssssss", $fullname, $gender, $birthdate, $occupation, $address, $province, $phone);
+
+    $result = mysqli_stmt_execute($stmt);
+
+    mysqli_stmt_close($stmt);
+
+    return $result;
 }
+
 
 function delete_person($link, $id)
 {
