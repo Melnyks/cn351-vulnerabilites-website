@@ -11,10 +11,11 @@
 <body>
     <p>
         ยินดีต้อนรับ, <?= htmlspecialchars($_SESSION['username'] ?? 'ผู้ใช้'); ?> |
-        <a href="logout.php" class="btn-logout">ออกจากระบบ</a>
+        <a href="logout.php" class="add-new" style="background-color: red;">ออกจากระบบ</a>
     </p>
     <h1>ข้อมูลที่อยู่ทั้งหมด</h1>
     <a href="create.php" class="add-new">เพิ่มข้อมูลใหม่</a>
+    <a href="upload.php" class="add-new" style="background-color: #FF8FAB;">อัปโหลดรายงาน</a>
     <table>
         <thead>
             <tr>
