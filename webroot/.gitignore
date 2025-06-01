@@ -1,0 +1,12 @@
+# Ignore logs and temp
+*.log
+*.tmp
+
+# Ignore environment files
+.env
+
+# Ignore vendor (if using composer)
+vendor/
+
+# Ignore OS files
+.DS_Store
