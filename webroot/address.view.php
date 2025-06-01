@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <p>
+        ยินดีต้อนรับ, <?= htmlspecialchars($_SESSION['username'] ?? 'ผู้ใช้'); ?> |
+        <a href="logout.php" class="btn-logout">ออกจากระบบ</a>
+    </p>
     <h1>ข้อมูลที่อยู่ทั้งหมด</h1>
     <a href="create.php" class="add-new">เพิ่มข้อมูลใหม่</a>
     <table>
